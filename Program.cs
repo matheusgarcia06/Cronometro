@@ -1,4 +1,5 @@
 ﻿
+using System.Data;
 Menu();
 
 static void Menu()
@@ -10,7 +11,9 @@ static void Menu()
     Console.WriteLine("Quanto tempo deseja contar?");
 
     string data = Console.ReadLine().ToLower();
+    char type = char.Parse(data.Substring(data.Length - 1, 1));
     Console.WriteLine(data);
+    Console.WriteLine(type);
 }
 
 static void Start(int time)
